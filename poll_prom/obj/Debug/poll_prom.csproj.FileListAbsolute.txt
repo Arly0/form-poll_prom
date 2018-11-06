@@ -1,0 +1,15 @@
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\bin\Debug\poll_prom.exe.config
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\bin\Debug\poll_prom.exe
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\bin\Debug\poll_prom.pdb
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\obj\Debug\poll_prom.csprojAssemblyReference.cache
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\obj\Debug\poll_prom.Form1.resources
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\obj\Debug\poll_prom.Form2.resources
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\obj\Debug\poll_prom.Properties.Resources.resources
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\obj\Debug\poll_prom.Список.resources
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\obj\Debug\poll_prom.csproj.GenerateResource.cache
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\obj\Debug\poll_prom.csproj.CoreCompileInputs.cache
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\obj\Debug\poll_prom.exe
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\obj\Debug\poll_prom.pdb
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\bin\Debug\Database1.mdf
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\bin\Debug\Database1_log.ldf
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\obj\Debug\poll_prom.input.resources
