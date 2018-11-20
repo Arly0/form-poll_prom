@@ -10,17 +10,21 @@ namespace poll_prom
 {
     class controll
     {
+        //указание путя к БД
         SqlConnection cn;
         string connect = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\Database1.mdf;Integrated Security=True";
+        // соединение с БД
         public controll()
         {
             cn = new SqlConnection(connect);
             cn.Open();
         }
+        //закрытие БД
         public void Closecont()
         {
             cn.Close();
         }
+        //проверка на подключение
         public SqlConnection getConnect()
         {
             if (cn != null)

@@ -13,14 +13,26 @@ namespace poll_prom
 {
     public partial class input : Form
     {
-        // для записи СКЛ синтаксиса
-        string sql;
-     /*   SqlConnection cn;
-        // строка с созданием подключение к БД
-        string connect = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\Database1.mdf;Integrated Security=True";
-       */ public input()
+
+        public input()
         { 
             InitializeComponent();
+        }
+
+        //функция очистки полей
+        private void clear()
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
+            textBox7.Clear();
+            textBox8.Clear();
+            textBox9.Clear();
+            textBox10.Clear();
+            textBox11.Clear();
         }
 
         
@@ -53,9 +65,7 @@ namespace poll_prom
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             
-            // подключение к БД и его открытие
-
-            // синтаксис T-SQL подключение ру языка
+        
             
         }
 
@@ -86,7 +96,8 @@ namespace poll_prom
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            //занесение данных из текстбоксов в переменные с дальнейшим занесением в БД
+            //чтоб длина строки была как можно короче
             int reg     = int.Parse(textBox1.Text);
             string name = textBox2.Text;
             int ind     = int.Parse(textBox3.Text);
@@ -99,21 +110,20 @@ namespace poll_prom
             int schoolnum     = int.Parse(textBox9.Text);
             string schoolcit  = textBox10.Text;
 
-            //экземпляр
-            //  cn = new SqlConnection(connect);
-            //cn.Open();
+            // подключение к БД
             controll con = new controll();
             SqlConnection cn = con.getConnect();
-            //cmd.CommandText = @"UPDATE prom SET reg_number=@reg_number, fio=@fio, [index]=@index, obl=@obl, sity=@sity, street=@street, num_house=@num_house, phone=@phone, school_name=@school_name, number_school=@number_school, sity_of_school=@sity_of_school";
-            sql = "INSERT INTO prom (reg_number, fio, [index], obl, sity, street, num_house, phone, school_name, number_school, sity_of_school) VALUES ('" + reg + "','" + name + "','" + ind + "','" + obl + "','" + sit + "','" + street + "','" + house + "','" + num + "','" + schoolname + "','" + schoolnum + "','" + schoolcit + "')";
+            string sql = "INSERT INTO prom (reg_number, fio, [index], obl, sity, street, num_house, phone, school_name, number_school, sity_of_school, date_birth, date_end_school) VALUES ('" + reg + "','" + name + "','" + ind + "','" + obl + "','" + sit + "','" + street + "','" + house + "','" + num + "','" + schoolname + "','" + schoolnum + "','" + schoolcit + "', @date_birth, @date_end_school)";
             // other tables
             
-            
+            //пробуем добавить данные в БД
             try
             {
-                
+                // добавляем введенные значения в БД
                 SqlCommand command = new SqlCommand(sql, cn);
-                command.Parameters.AddWithValue("@reg_number ", textBox1.Text);
+                command.Parameters.Add("@date_birth", SqlDbType.Date).Value = dateTimePicker1.Value.Date;
+                command.Parameters.Add("@date_end_school", SqlDbType.Date).Value = dateTimePicker2.Value.Date;
+                /*command.Parameters.AddWithValue("@reg_number ", textBox1.Text);
                 command.Parameters.AddWithValue("@fio ", textBox2.Text);
                 command.Parameters.AddWithValue("@index ", textBox3.Text);
                 command.Parameters.AddWithValue("@obl ", textBox4.Text);
@@ -123,16 +133,19 @@ namespace poll_prom
                 command.Parameters.AddWithValue("@phone ", textBox11.Text);
                 command.Parameters.AddWithValue("@school_name ", textBox8.Text);
                 command.Parameters.AddWithValue("@number_school ", textBox9.Text);
-                command.Parameters.AddWithValue("@sity_of_school ", textBox10.Text);
+                command.Parameters.AddWithValue("@sity_of_school ", textBox10.Text);*/
                 command.ExecuteNonQuery();
-                MessageBox.Show("prom added");
+                //выведет,если все ок
+                MessageBox.Show("Данные были успешно добавлены в БД.");
                 
             }
+            // покажет ошибку и ее суть(если есть)
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             con.Closecont();
+            clear();
             //cn.CLose();
         }
 
@@ -144,6 +157,11 @@ namespace poll_prom
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            clear();
         }
     }
 }

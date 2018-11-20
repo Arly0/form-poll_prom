@@ -36,30 +36,19 @@
             this.promBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.database1DataSet1 = new poll_prom.Database1DataSet1();
             this.promTableAdapter1 = new poll_prom.Database1DataSet1TableAdapters.promTableAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.database1DataSet2 = new poll_prom.Database1DataSet();
             this.promBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.regnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datebirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.indexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oblDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.streetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numhouseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.schoolnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberschoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sityofschoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateendschoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.database1DataSet2 = new poll_prom.Database1DataSet();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.promBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.promBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.promBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -100,133 +89,79 @@
             // 
             this.promTableAdapter1.ClearBeforeFill = true;
             // 
-            // dataGridView1
+            // promBindingSource2
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.regnumberDataGridViewTextBoxColumn,
-            this.fioDataGridViewTextBoxColumn,
-            this.datebirthDataGridViewTextBoxColumn,
-            this.indexDataGridViewTextBoxColumn,
-            this.oblDataGridViewTextBoxColumn,
-            this.sityDataGridViewTextBoxColumn,
-            this.streetDataGridViewTextBoxColumn,
-            this.numhouseDataGridViewTextBoxColumn,
-            this.phoneDataGridViewTextBoxColumn,
-            this.schoolnameDataGridViewTextBoxColumn,
-            this.numberschoolDataGridViewTextBoxColumn,
-            this.sityofschoolDataGridViewTextBoxColumn,
-            this.dateendschoolDataGridViewTextBoxColumn,
-            this.prizeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.promBindingSource2;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(944, 345);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.promBindingSource2.DataMember = "prom";
+            this.promBindingSource2.DataSource = this.database1DataSet2;
             // 
             // database1DataSet2
             // 
             this.database1DataSet2.DataSetName = "Database1DataSet";
             this.database1DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // promBindingSource2
+            // button2
             // 
-            this.promBindingSource2.DataMember = "prom";
-            this.promBindingSource2.DataSource = this.database1DataSet2;
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(824, 387);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // regnumberDataGridViewTextBoxColumn
+            // textBox1
             // 
-            this.regnumberDataGridViewTextBoxColumn.DataPropertyName = "reg_number";
-            this.regnumberDataGridViewTextBoxColumn.HeaderText = "reg_number";
-            this.regnumberDataGridViewTextBoxColumn.Name = "regnumberDataGridViewTextBoxColumn";
+            this.textBox1.Location = new System.Drawing.Point(632, 387);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(131, 22);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // fioDataGridViewTextBoxColumn
+            // dataGridView1
             // 
-            this.fioDataGridViewTextBoxColumn.DataPropertyName = "fio";
-            this.fioDataGridViewTextBoxColumn.HeaderText = "fio";
-            this.fioDataGridViewTextBoxColumn.Name = "fioDataGridViewTextBoxColumn";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(20, 21);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(895, 303);
+            this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_3);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
-            // datebirthDataGridViewTextBoxColumn
+            // comboBox1
             // 
-            this.datebirthDataGridViewTextBoxColumn.DataPropertyName = "date_birth";
-            this.datebirthDataGridViewTextBoxColumn.HeaderText = "date_birth";
-            this.datebirthDataGridViewTextBoxColumn.Name = "datebirthDataGridViewTextBoxColumn";
-            // 
-            // indexDataGridViewTextBoxColumn
-            // 
-            this.indexDataGridViewTextBoxColumn.DataPropertyName = "index";
-            this.indexDataGridViewTextBoxColumn.HeaderText = "index";
-            this.indexDataGridViewTextBoxColumn.Name = "indexDataGridViewTextBoxColumn";
-            // 
-            // oblDataGridViewTextBoxColumn
-            // 
-            this.oblDataGridViewTextBoxColumn.DataPropertyName = "obl";
-            this.oblDataGridViewTextBoxColumn.HeaderText = "obl";
-            this.oblDataGridViewTextBoxColumn.Name = "oblDataGridViewTextBoxColumn";
-            // 
-            // sityDataGridViewTextBoxColumn
-            // 
-            this.sityDataGridViewTextBoxColumn.DataPropertyName = "sity";
-            this.sityDataGridViewTextBoxColumn.HeaderText = "sity";
-            this.sityDataGridViewTextBoxColumn.Name = "sityDataGridViewTextBoxColumn";
-            // 
-            // streetDataGridViewTextBoxColumn
-            // 
-            this.streetDataGridViewTextBoxColumn.DataPropertyName = "street";
-            this.streetDataGridViewTextBoxColumn.HeaderText = "street";
-            this.streetDataGridViewTextBoxColumn.Name = "streetDataGridViewTextBoxColumn";
-            // 
-            // numhouseDataGridViewTextBoxColumn
-            // 
-            this.numhouseDataGridViewTextBoxColumn.DataPropertyName = "num_house";
-            this.numhouseDataGridViewTextBoxColumn.HeaderText = "num_house";
-            this.numhouseDataGridViewTextBoxColumn.Name = "numhouseDataGridViewTextBoxColumn";
-            // 
-            // phoneDataGridViewTextBoxColumn
-            // 
-            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "phone";
-            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            // 
-            // schoolnameDataGridViewTextBoxColumn
-            // 
-            this.schoolnameDataGridViewTextBoxColumn.DataPropertyName = "school_name";
-            this.schoolnameDataGridViewTextBoxColumn.HeaderText = "school_name";
-            this.schoolnameDataGridViewTextBoxColumn.Name = "schoolnameDataGridViewTextBoxColumn";
-            // 
-            // numberschoolDataGridViewTextBoxColumn
-            // 
-            this.numberschoolDataGridViewTextBoxColumn.DataPropertyName = "number_school";
-            this.numberschoolDataGridViewTextBoxColumn.HeaderText = "number_school";
-            this.numberschoolDataGridViewTextBoxColumn.Name = "numberschoolDataGridViewTextBoxColumn";
-            // 
-            // sityofschoolDataGridViewTextBoxColumn
-            // 
-            this.sityofschoolDataGridViewTextBoxColumn.DataPropertyName = "sity_of_school";
-            this.sityofschoolDataGridViewTextBoxColumn.HeaderText = "sity_of_school";
-            this.sityofschoolDataGridViewTextBoxColumn.Name = "sityofschoolDataGridViewTextBoxColumn";
-            // 
-            // dateendschoolDataGridViewTextBoxColumn
-            // 
-            this.dateendschoolDataGridViewTextBoxColumn.DataPropertyName = "date_end_school";
-            this.dateendschoolDataGridViewTextBoxColumn.HeaderText = "date_end_school";
-            this.dateendschoolDataGridViewTextBoxColumn.Name = "dateendschoolDataGridViewTextBoxColumn";
-            // 
-            // prizeDataGridViewTextBoxColumn
-            // 
-            this.prizeDataGridViewTextBoxColumn.DataPropertyName = "prize";
-            this.prizeDataGridViewTextBoxColumn.HeaderText = "prize";
-            this.prizeDataGridViewTextBoxColumn.Name = "prizeDataGridViewTextBoxColumn";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Регистрационный номер",
+            "ФИО",
+            "Дата рождения",
+            "Индекс",
+            "Область",
+            "Город",
+            "Улица",
+            "Номер дома",
+            "Телефон",
+            "Назв школы",
+            "Номер школы",
+            "Город школы",
+            "Дата окончания",
+            "Награды"});
+            this.comboBox1.Location = new System.Drawing.Point(459, 385);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 5;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -235,10 +170,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.promBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.promBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -251,22 +187,11 @@
         private Database1DataSet1 database1DataSet1;
         private System.Windows.Forms.BindingSource promBindingSource1;
         private Database1DataSet1TableAdapters.promTableAdapter promTableAdapter1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private Database1DataSet database1DataSet2;
         private System.Windows.Forms.BindingSource promBindingSource2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn regnumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datebirthDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn indexDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oblDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn streetDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numhouseDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn schoolnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberschoolDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sityofschoolDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateendschoolDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prizeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

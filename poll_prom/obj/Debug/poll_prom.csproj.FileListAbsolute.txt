@@ -13,3 +13,4 @@ C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\obj\Debug\poll_prom.pdb
 C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\bin\Debug\Database1.mdf
 C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\bin\Debug\Database1_log.ldf
 C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\obj\Debug\poll_prom.input.resources
+C:\Users\NGorbunov\source\repos\poll_prom\poll_prom\obj\Debug\poll_prom.find.resources
